@@ -1,0 +1,35 @@
+{
+  "name": "lookalike-util",
+  "version": "1.0.0",
+  "description": "Simply utility package for replacing lookalike characters with their respective word. Useful for those trying to bypass filters, etc.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Status-Plus/lookalike-util.git"
+  },
+  "keywords": [
+    "discord",
+    "tests",
+    "filtering",
+    "bypassing",
+    "characters"
+  ],
+  "author": "Status-Plus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Status-Plus/lookalike-util/issues"
+  },
+  "homepage": "https://github.com/Status-Plus/lookalike-util#readme",
+  "devDependencies": {
+    "jest": "^28.0.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
