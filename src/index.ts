@@ -1,4 +1,4 @@
-import fs from 'fs'
+import * as fs from 'fs';
 
 const lookalikes = JSON.parse(fs.readFileSync('./lib/lookalike.json'))
 
