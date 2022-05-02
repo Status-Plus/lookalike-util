@@ -1,5 +1,7 @@
-[
-    {
+   [
+
+   
+   {
       "abuseLetter": "È",
       "replacementLetter": "E"
     },
@@ -675,4 +677,4 @@
       "abuseLetter": "৭",
       "replacementLetter": "9"
     }
-  ]
+   ]
