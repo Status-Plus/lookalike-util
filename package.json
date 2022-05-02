@@ -2,13 +2,15 @@
   "name": "lookalike-util",
   "version": "1.0.0",
   "description": "Simply utility package for replacing lookalike characters with their respective word. Useful for those trying to bypass filters, etc.",
-  "module": "index.js",
+  "module": "src/index.js",
+  "main": "dist/lookalike.js",
   "directories": {
     "lib": "lib",
     "test": "tests"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "jest": {
     "transform": {
