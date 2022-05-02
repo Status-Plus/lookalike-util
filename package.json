@@ -7,8 +7,11 @@
     "lib": "lib",
     "test": "tests"
   },
+  "main": "./src/index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tsc": "tsc",
+    "build": "npm run tsc ."
   },
   "jest": {
     "transform": {
@@ -26,6 +29,7 @@
     "bypassing",
     "characters"
   ],
+  "types": "./src/index.d.ts",
   "author": "Status-Plus",
   "license": "MIT",
   "bugs": {
@@ -43,6 +47,8 @@
     "eslint-plugin-import": "^2.26.0",
     "jest": "^28.0.3",
     "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "ts-node": "^8.6.0",
+    "typescript": "^4.5.3"
   }
 }
