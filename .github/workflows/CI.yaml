@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Run Eslint
-        run: eslint .
+        run: npx eslint .
 
       - name: Run Tests
         run: npm test
@@ -70,7 +70,7 @@ jobs:
         run: npm install
 
       - name: Run Eslint
-        run: eslint .
+        run: npx eslint .
 
       - name: Run Tests
         run: npm test
