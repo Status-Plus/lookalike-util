@@ -6,13 +6,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'lookalike.js',
     library: {
-        name: "lookalikeUtil",
-        type: 'umd'
-    }
+      name: 'lookalikeUtil',
+      type: 'umd',
+    },
   },
   resolve: {
     fallback: {
-        "fs": false
+      fs: false,
     },
-}
+  },
 };

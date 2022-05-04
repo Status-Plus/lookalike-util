@@ -1,5 +1,5 @@
 {
-  "name": "lookalike-util",
+  "name": "@status-plus/lookalike-util",
   "version": "1.0.0",
   "description": "Simply utility package for replacing lookalike characters with their respective word. Useful for those trying to bypass filters, etc.",
   "module": "src/index.js",
@@ -8,6 +8,7 @@
     "test": "tests"
   },
   "main": "dist/lookalike.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "tsc": "tsc",
@@ -29,7 +30,6 @@
     "bypassing",
     "characters"
   ],
-  "types": "./src/index.d.ts",
   "author": "Status-Plus",
   "license": "MIT",
   "bugs": {

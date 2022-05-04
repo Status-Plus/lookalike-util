@@ -1,0 +1,89 @@
+name: Test, Lint, and Publish to NPM
+
+on: push
+
+jobs:
+
+  deploy-main: 
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Eslint
+        run: eslint .
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Build Webpack Module
+        run: npm run build
+
+
+      - name: Get Package Version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+          path: 'package.json'
+          prop_path: 'version'
+
+
+      - name: Publish to npm Registry
+        run: npm publish
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create a Release
+        uses: softprops/action-gh-release@v1
+          with:
+            name: ${{ steps.version.outputs.prop }}
+            tag_name: ${{ steps.version.outputs.prop }}
+            generate_release_notes: true
+
+      
+
+
+  deploy-dev: 
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Eslint
+        run: eslint .
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Build Webpack Module
+        run: npm run build
+
+
+      - name: Get Package Version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+          path: 'package.json'
+          prop_path: 'version'
+
+      

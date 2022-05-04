@@ -16,5 +16,10 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-control-regex": 0,
+        "no-plusplus": 0,
+        "no-misleading-character-class": 0,
+        "no-undef": 0
+
     }
 }
