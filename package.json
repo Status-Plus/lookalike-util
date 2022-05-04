@@ -1,6 +1,6 @@
 {
   "name": "@status-plus/lookalike-util",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simply utility package for replacing lookalike characters with their respective word. Useful for those trying to bypass filters, etc.",
   "module": "src/index.js",
   "directories": {
