@@ -1,6 +1,4 @@
-import * as fs from 'fs'
-
-const lookalikes = JSON.parse(fs.readFileSync('./lib/lookalike.json'))
+import lookalikes from '../lib/lookalike'
 
 export function clearInvisible(string) {
     const newString = string.replace(/[\u200B\u200C\u200D\u200E\u200F\u000b\u2028\u2029\uFEFF\u202D]/g, '')
@@ -9,7 +7,6 @@ export function clearInvisible(string) {
 }
 
 export function clearSimilar(str) {
-    
     const replacementMap = lookalikes.reduce((acc, el) => {
         acc[el.abuseLetter] = el.replacementLetter;
         return acc;
