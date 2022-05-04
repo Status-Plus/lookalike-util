@@ -45,10 +45,10 @@ jobs:
 
       - name: Create a Release
         uses: softprops/action-gh-release@v1
-          with:
-            name: ${{ steps.version.outputs.prop }}
-            tag_name: ${{ steps.version.outputs.prop }}
-            generate_release_notes: true
+        with:
+          name: ${{ steps.version.outputs.prop }}
+          tag_name: ${{ steps.version.outputs.prop }}
+          generate_release_notes: true
 
       
 
