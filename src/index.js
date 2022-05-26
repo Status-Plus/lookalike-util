@@ -1,4 +1,4 @@
-import lookalikes from '../lib/lookalike';
+import lookalikes from '../lib/lookalike.js';
 
 export function clearInvisible(string) {
   const newString = string.replace(/[\u200B\u200C\u200D\u200E\u200F\u000b\u2028\u2029\uFEFF\u202D]/g, '');
