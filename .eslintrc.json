@@ -19,7 +19,9 @@
         "no-control-regex": 0,
         "no-plusplus": 0,
         "no-misleading-character-class": 0,
-        "no-undef": 0
+        "no-undef": 0,
+        "linebreak-style": 0,
+        "import/extensions": 0
 
     }
 }
