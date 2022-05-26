@@ -1,13 +1,13 @@
-import { clearSimilar } from '../src/index';
+import lookalikeUtil from '../src/index';
 
 test('replace ü with u ', () => {
-  const testString = clearSimilar('you sück!');
+  const testString = lookalikeUtil.clearSimilar('you sück!');
 
   expect(testString).toBe('you suck!');
 });
 
 test('replace multiple non-english characters with their counterparts', () => {
-  const testString = clearSimilar('Êċℎọ!');
+  const testString = lookalikeUtil.clearSimilar('Êċℎọ!');
 
   expect(testString).toBe('Echo!');
 });
